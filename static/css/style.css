@@ -11,13 +11,34 @@ h1,h2,h3 {
     line-height:1.2
 }
 
+.content {
+    padding-bottom: 10px;
+}
+
 .date {
     font-size: 14px;
-    padding-top: 10px
-    padding-bootom: 10px
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .footer {
     font-size:14px;
     padding-top:20px
+}
+
+.header-nav {
+    float: right;
+}
+
+hr {
+    border: none;
+    background-color: #ccc;
+    color: #ccc;
+    height: 1px;
+}
+
+.post-nav {
+    font-size: 16px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }

@@ -1,11 +1,27 @@
 {{ define "main" }}
 
-        <h1>{{ .Title }}</h1>
-        <div class="date">
-            Posted {{ .Date.Format "Sunday, 2 January 2006"}}
-        </div>
+    <h1>{{ .Title }}</h1>
+    <div class="date">
+        Posted: {{ .Date.Format "Sunday, 2 January 2006"}} <br />
+        Minutes Reading Time: {{ .ReadingTime }}
+    </div>
 
-        {{ .Content }}
-        
+    <div class="content">
+    {{ .Content }}
+    </div>
+
+    <hr />
+
+    <nav class="post-nav">
+    {{if .NextInSection}}
+    Newer &larr;
+    <a href="{{.NextInSection.Permalink}}">{{.NextInSection.Title}}</a><br />
+    {{end}}
+
+    {{if .PrevInSection}}
+    Older &rarr;
+    <a href="{{.PrevInSection.Permalink}}">{{.PrevInSection.Title}}</a><br />
+    {{end}}
+    </nav>
 
 {{ end }}
