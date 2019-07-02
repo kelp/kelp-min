@@ -1,8 +1,5 @@
 <div class="footer">
 
-    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
-    <img alt="Creative Commons License" style="border-width:0"
-    src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
-    &copy; 2019 Technicians Field Guide LLC</br>
+    {{ replace .Site.Copyright "{year}" now.Year | safeHTML }}
 
 </div>
